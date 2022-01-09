@@ -1,0 +1,14 @@
+.app {
+  height: 100vh;
+  background-color: rgb(7, 177, 245);
+  display: grid;
+  place-items: center;
+}
+
+.task {
+  list-style-type: none;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

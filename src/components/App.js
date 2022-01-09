@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 let globalID = 0;
 
@@ -19,20 +20,18 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app">
       <h1>React todo app for refreshing the memory</h1>
       <form onSubmit={createTodo}>
         <input type="text" value={task} onChange={(e) => setTask(e.target.value)} />
         <button type="submit">Create Todo</button>
       </form>
 
-      <ul>
+      <ul className="task">
         {todos.map((item, index) => {
           return (
             <div key={item.id}>
-              <li>
-                {item.todo} ({item.id})
-              </li>
+              <li>{item.todo}</li>
               <button onClick={() => deleteItem(item.id)}>delete</button>
             </div>
           );
